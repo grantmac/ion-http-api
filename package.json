@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "node-fetch": "2.6.5",
+    "serverless-offline": "^8.8.0"
+  },
+  "scripts": {
+    "dev": "nodemon -e js  --exec \"sls offline\""
+  }
+}

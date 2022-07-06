@@ -1,0 +1,33 @@
+service: ion-http-api
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+plugins:
+  - serverless-offline
+
+functions:
+  token:
+    handler: v1/token.index
+    events:
+      - httpApi:
+          path: /v1/token
+          method: get
+          cors: true
+
+  startCharge:
+    handler: v1/startCharge.index
+    events:
+      - httpApi:
+          path: /v1/startCharge
+          method: post
+          cors: true
+
+  stopCharge:
+    handler: v1/stopCharge.index
+    events:
+      - httpApi:
+          path: /v1/stopCharge
+          method: post
+          cors: true
