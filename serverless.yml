@@ -31,3 +31,11 @@ functions:
           path: /v1/stopCharge
           method: post
           cors: true
+
+  chargeStatus:
+    handler: v1/chargeStatus.index
+    events:
+      - httpApi:
+          path: /v1/status
+          method: post
+          cors: true
