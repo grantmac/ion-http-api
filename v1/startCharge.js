@@ -2,11 +2,11 @@ const axios = require("axios");
 
 module.exports.index = async (event) => {
   let req = JSON.parse(event.body);
-
+  console.log(req);
   if (!req.username) {
     return {
       statusCode: 401,
-      body: "no username",
+      message: "no username",
     };
   }
 

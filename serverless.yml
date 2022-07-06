@@ -39,3 +39,11 @@ functions:
           path: /v1/status
           method: post
           cors: true
+
+  locateCharger:
+    handler: v1/locateCharger.index
+    events:
+      - httpApi:
+          path: /v1/locateCharger
+          method: get
+          cors: true

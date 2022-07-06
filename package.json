@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "algoliasearch": "^4.13.1",
     "axios": "^0.27.2",
+    "mongodb": "^4.7.0",
     "node-fetch": "2.6.5",
     "serverless-offline": "^8.8.0"
   },
