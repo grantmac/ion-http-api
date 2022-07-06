@@ -1,8 +1,6 @@
 const algoliasearch = require("algoliasearch");
 
 module.exports.index = async (event) => {
-  let req = JSON.parse(event.body);
-
   const client = algoliasearch(
     "ONNNBDYVAZ",
     "b0865bbd3446ba6b8b781e35d6ba405e"
@@ -10,7 +8,7 @@ module.exports.index = async (event) => {
   const index = client.initIndex("cps_chargers");
 
   let results = await index.search("", {
-    aroundLatLng: "55.8587358, -4.2492032",
+    aroundLatLng: `${event.queryStringParameters.lat}, ${event.queryStringParameters.lng}`,
     aroundRadius: 55,
   });
 
